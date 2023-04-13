@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+
+/*define custom ccs variables*/
+:root{
+    --bg-black-900:#000000;
+    --bg-black-100:#dddddd;
+    --bg-black-50:#eff0f4;
+    --bg-opacity:rgba(255,255,255,0.5);
+    --text-black-900:#000000;
+    --text-black-700:#555555;
+    --text-black-600:#666666;
+    --text-black-300:#bbbbbb;
+    --outer-shadow:3px 3px 3px #d0d0d0,-3px -3px 3px #f8f8f8;
+    --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+    --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+    --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
+}
+/*override define custom ccs variables for dark theme*/
+body.dark{
+    --bg-black-900:#ffffff;
+    --bg-black-100:#353535;
+    --bg-black-50: linear-gradient(to right, #232925, #1a8358);     /* #303623 #2b2c2f*/;
+    --bg-opacity:rgba(43,44,47,0.5);
+    --text-black-900:#ffffff;
+    --text-black-700:#ffffff;
+    --text-black-600:#bbbbbb;
+    --outer-shadow:3px 3px 3px #222327,-3px -3px 3px #363636;
+    --outer-shadow-0: 0 0 0 #222327, 0 0 0 #363636;
+    --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
+    --inner-shadow-0: inset 0 0 0 #222327, inset 0 0 0 #363636;
+}
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    background: var(--bg-black-50);
+    
+}
+
+.section1{
+  justify-content: center;
+  text-align: -webkit-center;
+  font-style: italic;
+}
+
+.home-section .home-text p{
+    color:var(--text-black-300);
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 20px
+}
+.home-section .home-text h2{
+    color:var(--text-black-700);
+    font-size: 55px;
+    font-weight: 700;
+    margin: 10px;
+}
+.home-section .home-text h1{
+    color:var(--text-black-700);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+/*--------Home Img------------*/
+/* .home-img .img-box{
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 15%;
+  border-radius: 50%;
+}
+.home-img .img-box img{
+  
+  width: 35%;
+  border-radius: 50%;
+
+} */
+
+.circular--square { 
+  border-style: outset;
+  border-radius: 50%; 
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%; 
+}
+
+
+
+/**a */
+.logo-a{
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Inspiration', cursive;
+    text-align: center;
+    line-height: 36px;
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    color:var(--skin-color);
+    border-radius: 50%;
+    border:2px solid var(--skin-color);
+    margin: 10px;
+    margin-bottom: auto;
+}
+
+.logo-a :hover{
+  color:rgb(105, 105, 70);
+  border:rgb(50, 66, 97);
+}
+
+.btn-social{
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-align: center;
+  inline-size: -webkit-fill-available;
+  border: 0;
+  width: 100%;
+  font-size: 16px;
+  padding: 1rem;
+  border-radius: 6px;
+  gap: 2rem;
+}
+
+/*-------------------*/
+   
+  .accordion {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .acordion-item {
+    background-color: transparent;
+    border-radius: 5px;
+  }
+  .accordion-item__button {
+    border: 0;
+    display: block;
+    font-family: 'Krona One', sans-serif;
+    font-family: 'Righteous', cursive;
+    background: var(--skin-color);
+    width: 100%;
+    color: var(--text-black-300);
+    text-align: left;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 30px;
+  }
+  .accordion-item__button:after {
+    content: "+";
+    float: right;
+    right: 0;
+  }
+  .accordion-item__button.active, .accordion-item__button:hover {
+    background-color: #fff1e9;
+    border-radius: 20px;
+  }
+  .accordion-item__button.active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .accordion-item__button.active:after {
+    content: "-";
+  }
+  .accordion-item__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.4s ease-in-out;
+    background-color: rgba(200, 213, 252, 0.199);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-family: 'Kelly Slab', cursive;
+    font-family: 'Jockey One', sans-serif;
+  }
+  .accordion-item__content.active {
+    display: block;
+  }
+  .accordion-item__content p {
+    padding: 1rem;
+    color: var(--text-black-700);
+  }
